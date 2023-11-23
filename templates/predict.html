@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f8f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            opacity: 0;
+            animation: fadeIn 1s forwards;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+
+        header {
+            text-align: center;
+            color: #6a0572; /* Purple heading color */
+        }
+
+        p {
+            text-align: center;
+            color: #8b5d9b; /* Purple paragraph color */
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin-top: 10px;
+            color: #6a0572; /* Purple label color */
+        }
+
+        input, select {
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            border: 1px solid #8b5d9b; /* Purple border color */
+            border-radius: 4px;
+        }
+
+        button {
+            background-color: #6a0572;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #8b5d9b; /* Darker purple on hover */
+            transform: scale(1.05);
+        }
+    </style>
+    <title>Your Flask App</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🚗 Car Information Form 🚗</h1>
+            <p>Enter the details below 🚀</p>
+        </header>
+
+        <form action="/predict" method="post">
+            <label for="make">Make 💡:</label>
+            <input type="text" id="make" name="make" required>
+
+            <label for="model">Model 🚗:</label>
+            <input type="text" id="model" name="model" required>
+
+            <label for="year">Year 📅:</label>
+            <input type="number" id="year" name="year" required>
+
+            <label for="fuel">Engine Fuel Type ⛽:</label>
+            <input type="text" id="fuel" name="fuel" required>
+
+            <label for="hp">Engine HP 🚀:</label>
+            <input type="number" id="hp" name="hp" required>
+
+            <label for="cylinders">Engine Cylinders 🔧:</label>
+            <input type="number" id="cylinders" name="cylinders" required>
+
+            <label for="transmission">Transmission Type 🚥:</label>
+            <input type="text" id="transmission" name="transmission" required>
+
+            <label for="wheels">Driven Wheels 🚙:</label>
+            <input type="text" id="wheels" name="wheels" required>
+
+            <label for="doors">Number of Doors 🚪:</label>
+            <input type="number" id="doors" name="doors" required>
+
+            <label for="size">Vehicle Size 📐:</label>
+            <input type="text" id="size" name="size" required>
+
+            <label for="style">Vehicle Style 🎨:</label>
+            <input type="text" id="style" name="style" required>
+
+            <label for="highway">Highway MPG 🛣️:</label>
+            <input type="number" id="highway" name="highway" required>
+
+            <label for="city">City MPG 🏙️:</label>
+            <input type="number" id="city" name="city" required>
+
+            <label for="popularity">Popularity 🌟:</label>
+            <input type="number" id="popularity" name="popularity" required>
+
+            <button type="submit">Submit 🚀</button>
+        </form>
+    </div>
+</body>
+</html>

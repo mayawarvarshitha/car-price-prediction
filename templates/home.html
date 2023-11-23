@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Sales Predictor</title>
+    <style>
+        body {
+            background: linear-gradient(180deg, #dcd6f7 0%, #a29bfe 100%); /* Lavender to Light Blue gradient background */
+            color: #333; /* Dark text color */
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .container {
+            max-width: 800px;
+            text-align: center;
+            padding: 40px;
+            background-color: #fff; /* White background for container */
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            opacity: 0;
+            transform: translateY(-20px);
+            animation: fadeInUp 1s ease-in-out forwards;
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        header {
+            margin-bottom: 20px;
+        }
+
+        .animated-heading {
+            font-size: 3em;
+            color: #6a0572; /* Deep lavender heading color */
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        .car-section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .car-card {
+            background-color: #f7f7f7; /* Light gray background for cards */
+            border-radius: 12px;
+            padding: 30px;
+            margin: 20px;
+            width: 40%;
+            box-sizing: border-box;
+            text-align: left;
+            transition: transform 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .car-card:hover {
+            transform: scale(1.05); /* Scale up on hover */
+        }
+
+        .toyota {
+            background-color: #b19cd9; /* Light lavender for Toyota */
+        }
+
+        .bmw {
+            background-color: #a05195; /* Light lavender for BMW */
+        }
+
+        /* Add more styles for other car companies as needed */
+
+        .animated-button {
+            display: inline-block;
+            padding: 15px 30px;
+            font-size: 1.5em;
+            background-color: #6a0572; /* Deep lavender for the button */
+            color: #fff; /* White text on the button */
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            text-decoration: none; /* Remove default link styling */
+            margin-top: 30px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .animated-button:hover {
+            background-color: #360568; /* Darker lavender on hover */
+        }
+
+        .icon {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 class="animated-heading">🚗 Car Sales Predictor 🌟</h1>
+            <p>Explore the future of car sales with our advanced prediction system!</p>
+        </header>
+        
+        <section class="car-section">
+            <div class="car-card toyota">
+                <h2>Toyota</h2>
+                <p>Discover the latest innovations and reliability from Toyota.</p>
+                <!-- Add more details or images as needed for each car company -->
+            </div>
+            
+            <div class="car-card bmw">
+                <h2>BMW</h2>
+                <p>Experience luxury and performance with BMW's exceptional lineup.</p>
+                <!-- Add more details or images as needed for each car company -->
+            </div>
+            
+            <!-- Add more car cards for other companies as needed -->
+        </section>
+
+        <a href="/predict" class="animated-button">
+            <span class="icon">🔮</span> Predict Now
+        </a>
+    </div>
+</body
